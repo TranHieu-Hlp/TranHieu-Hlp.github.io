@@ -65,3 +65,9 @@ nav ul li a {
     text-decoration: none;
     color: rgb(34, 103, 157);
 }
+footer {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    height: 20px;   
+}
