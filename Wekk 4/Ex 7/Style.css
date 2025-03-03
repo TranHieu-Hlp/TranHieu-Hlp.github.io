@@ -1,0 +1,67 @@
+.container {
+    display: flex;
+    gap: 0px; /* Khoảng cách giữa các cột */
+    padding-left: 40px;
+}
+.column1 {
+    flex: 2;
+    padding: 20px;
+    background-color: rgb(187, 215, 197); /* Màu nền cột 1 */
+}
+.column2 {
+    flex: 9 ;
+    padding-left: 45px;
+
+}
+.column2 h1 {
+    font-size: 70px;
+    margin-bottom: 1px;
+    margin-top: 20px;
+}
+.column2 h2 {
+    margin-top: 7px;
+    margin-bottom: 7PX;
+}
+ section article h3 {
+    color: rgb(86, 147, 194);
+ }
+ 
+ p {
+    margin-bottom: 1px; /* Giảm khoảng cách giữa các đoạn */
+    line-height: 0.4; /* Điều chỉnh chiều cao dòng */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.column1 img {
+    padding-left: 40px;
+}
+
+
+body {
+    background-color: gainsboro;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    background-color:  rgb(187, 215, 197);
+    margin: 0;
+    padding-left: 40px;
+    text-align: center;
+    line-height: 0px;
+}
+
+nav ul li {
+    display: inline;
+    padding: 40px;
+    font-size: 25px;
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(34, 103, 157);
+}

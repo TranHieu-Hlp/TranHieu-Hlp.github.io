@@ -1,0 +1,41 @@
+body {
+    background-color: gainsboro;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 0px;
+}
+
+nav ul li {
+    display: inline;
+    padding: 40px;
+    font-size: 25px;
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+nav ul li a:hover {
+    color: aqua;
+}
+
+header h1 {
+    text-align: center;
+}
+
+article header p {
+    font-style: italic;
+}
+
+main {
+    padding-left: 20px;
+}
