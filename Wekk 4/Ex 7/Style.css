@@ -1,7 +1,7 @@
 .container {
     display: flex;
     gap: 0px; /* Khoảng cách giữa các cột */
-    padding-left: 40px;
+    padding: 40px;
 }
 .column1 {
     flex: 2;
