@@ -27,8 +27,8 @@
  }
  
  p {
-    margin-bottom: 1px; /* Giảm khoảng cách giữa các đoạn */
-    line-height: 0.4; /* Điều chỉnh chiều cao dòng */
+    margin-bottom: 2px; /* Giảm khoảng cách giữa các đoạn */
+    line-height: 1,5px; /* Điều chỉnh chiều cao dòng */
 }
 
 body {
@@ -71,3 +71,6 @@ footer {
     text-align: center;
     height: 20px;   
 }
+ table {
+    border-collapse: collapse;
+ }
