@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dự án HTML + JavaScript Đầy Đủ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+    .box {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    .hidden {
+      display: none;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid #aaa;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HTML + JavaScript Toàn Diện</h1>
+
+  <!-- 1. Biến, toán tử, kiểu dữ liệu -->
+  <div class="box">
+    <h2>Biến và Toán tử</h2>
+    <button onclick="phepTinh()">Tính toán</button>
+    <p id="ketqua"></p>
+  </div>
+
+  <!-- 2. Điều kiện, vòng lặp, switch -->
+  <div class="box">
+    <h2>Điều kiện và vòng lặp</h2>
+    <button onclick="kiemTraSo()">Kiểm tra số</button>
+    <button onclick="inMangSoChan()">In số chẵn</button>
+    <p id="kiemtra"></p>
+    <p id="chan"></p>
+  </div>
+
+  <!-- 3. DOM manipulation và form -->
+  <div class="box">
+    <h2>Biểu mẫu và DOM</h2>
+    <form id="myForm" onsubmit="xuLyForm(event)">
+      <label>Nhập tên:</label>
+      <input type="text" id="ten" required>
+      <input type="submit" value="Gửi">
+    </form>
+    <p id="loichao"></p>
+  </div>
+
+  <!-- 4. Mảng và đối tượng -->
+  <div class="box">
+    <h2>Mảng và Đối tượng</h2>
+    <button onclick="xemDanhSach()">Xem danh sách trái cây</button>
+    <button onclick="hienThiDoiTuong()">Xem thông tin người dùng</button>
+    <ul id="danhsach"></ul>
+    <p id="nguoidung"></p>
+  </div>
+
+  <!-- 5. Sự kiện và xử lý tương tác -->
+  <div class="box">
+    <h2>Sự kiện và Tương tác</h2>
+    <input type="text" onkeydown="nhapPhim(event)" placeholder="Gõ phím...">
+    <p id="phim"></p>
+    <div id="hoverbox" style="padding: 10px; background: #ddd;" onmouseover="hoverVao()" onmouseout="hoverRa()">Di chuột vào tôi</div>
+  </div>
+
+  <!-- 6. Thời gian và bộ đếm -->
+  <div class="box">
+    <h2>Thời gian</h2>
+    <p id="thoigian"></p>
+    <button onclick="demNguoc()">Bắt đầu đếm ngược</button>
+    <p id="countdown"></p>
+  </div>
+
+  <!-- 7. alert, prompt, confirm -->
+  <div class="box">
+    <h2>Thông báo</h2>
+    <button onclick="hienThongBao()">Hiển thị Alert</button>
+    <button onclick="xacNhan()">Xác nhận</button>
+    <button onclick="nhapTen()">Nhập tên</button>
+  </div>
+
+  <!-- 8. Table + Hình ảnh -->
+  <div class="box">
+    <h2>Bảng và Ảnh</h2>
+    <table>
+      <tr><th>Tên</th><th>Tuổi</th></tr>
+      <tr><td>Nam</td><td>22</td></tr>
+      <tr><td>Lan</td><td>24</td></tr>
+    </table>
+    <img src="https://via.placeholder.com/150" alt="Ảnh minh họa">
+  </div>
+
+  <script>
+    // 1. Biến, toán tử
+    function phepTinh() {
+      let a = 10, b = 5;
+      let tong = a + b;
+      let binhPhuong = a ** 2;
+      let ketQua = `a + b = ${tong}, a^2 = ${binhPhuong}`;
+      document.getElementById("ketqua").innerText = ketQua;
+    }
+
+    // 2. Điều kiện, vòng lặp, switch
+    function kiemTraSo() {
+      let so = parseInt(prompt("Nhập số: "));
+      let kq = "";
+      if (so > 0) {
+        kq = "Số dương";
+      } else if (so < 0) {
+        kq = "Số âm";
+      } else {
+        kq = "Số 0";
+      }
+      switch (so % 2) {
+        case 0:
+          kq += " và chẵn";
+          break;
+        default:
+          kq += " và lẻ";
+      }
+      document.getElementById("kiemtra").innerText = kq;
+    }
+
+    function inMangSoChan() {
+      let kq = [];
+      for (let i = 2; i <= 20; i += 2) {
+        kq.push(i);
+      }
+      document.getElementById("chan").innerText = kq.join(", ");
+    }
+
+    // 3. DOM và biểu mẫu
+    function xuLyForm(event) {
+      event.preventDefault();
+      const ten = document.getElementById("ten").value;
+      document.getElementById("loichao").innerText = `Chào bạn, ${ten}!`;
+    }
+
+    // 4. Mảng và đối tượng
+    function xemDanhSach() {
+      let fruits = ["Táo", "Cam", "Chuối"];
+      let html = "";
+      fruits.forEach((f) => html += `<li>${f}</li>`);
+      document.getElementById("danhsach").innerHTML = html;
+    }
+
+    function hienThiDoiTuong() {
+      let user = {
+        ten: "An",
+        tuoi: 25,
+        diachi: "Hà Nội"
+      };
+      document.getElementById("nguoidung").innerText = `${user.ten} - ${user.tuoi} tuổi - ${user.diachi}`;
+    }
+
+    // 5. Sự kiện
+    function nhapPhim(e) {
+      document.getElementById("phim").innerText = `Bạn vừa gõ: ${e.key}`;
+    }
+
+    function hoverVao() {
+      document.getElementById("hoverbox").style.backgroundColor = "lightblue";
+    }
+    function hoverRa() {
+      document.getElementById("hoverbox").style.backgroundColor = "#ddd";
+    }
+
+    // 6. Thời gian
+    setInterval(() => {
+      const now = new Date();
+      document.getElementById("thoigian").innerText = now.toLocaleString();
+    }, 1000);
+
+    function demNguoc() {
+      let count = 5;
+      const interval = setInterval(() => {
+        document.getElementById("countdown").innerText = `Đếm: ${count}`;
+        count--;
+        if (count < 0) {
+          clearInterval(interval);
+          document.getElementById("countdown").innerText = "Hết giờ!";
+        }
+      }, 1000);
+    }
+
+    // 7. alert, prompt, confirm
+    function hienThongBao() {
+      alert("Xin chào!");
+    }
+    function xacNhan() {
+      let ok = confirm("Bạn có chắc không?");
+      alert(ok ? "Đã xác nhận" : "Đã hủy");
+    }
+    function nhapTen() {
+      let ten = prompt("Nhập tên của bạn:");
+      if (ten) alert(`Xin chào ${ten}`);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+| Toán tử | Ví dụ            | Kết quả                     |
+| ------- | ---------------- | --------------------------- |
+| `+`     | `5 + 3`          | `8`                         |
+| `-`     | `5 - 3`          | `2`                         |
+| `*`     | `5 * 3`          | `15`                        |
+| `/`     | `5 / 3`          | `1.6667`                    |
+| `%`     | `5 % 3`          | `2` (phần dư của phép chia) |
+| `++`    | `let a = 5; a++` | `6` (tăng giá trị lên 1)    |
+| `--`    | `let a = 5; a--` | `4` (giảm giá trị đi 1)     |
+
+let a = 10;
+let b = 3;
+
+console.log(a + b); // 13
+console.log(a - b); // 7
+console.log(a * b); // 30
+console.log(a / b); // 3.33
+console.log(a % b); // 1 (phần dư khi chia)
+
+| Toán tử | Ví dụ       | Kết quả                                   |
+| ------- | ----------- | ----------------------------------------- |
+| `==`    | `5 == 5`    | `true` (so sánh giá trị)                  |
+| `===`   | `5 === '5'` | `false` (so sánh giá trị và kiểu dữ liệu) |
+| `!=`    | `5 != 3`    | `true` (khác nhau)                        |
+| `!==`   | `5 !== '5'` | `true` (khác nhau về kiểu dữ liệu)        |
+| `>`     | `5 > 3`     | `true` (lớn hơn)                          |
+| `<`     | `5 < 3`     | `false` (bé hơn)                          |
+| `>=`    | `5 >= 5`    | `true` (lớn hơn hoặc bằng)                |
+| `<=`    | `5 <= 3`    | `false` (bé hơn hoặc bằng)                |
+
+let x = 10;
+let y = 5;
+
+console.log(x == y);  // false
+console.log(x > y);   // true
+console.log(x !== 10); // false
+
+| Toán tử | Ví dụ                | Kết quả                          |
+| ------- | -------------------- | -------------------------------- |
+| `=`     | `let x = 5;`         | Gán giá trị 5 cho x              |
+| `+=`    | `let x = 5; x += 3;` | `x = 8` (tăng giá trị x lên 3)   |
+| `-=`    | `let x = 5; x -= 3;` | `x = 2` (giảm giá trị x đi 3)    |
+| `*=`    | `let x = 5; x *= 2;` | `x = 10` (nhân giá trị x với 2)  |
+| `/=`    | `let x = 5; x /= 2;` | `x = 2.5` (chia giá trị x cho 2) |
+
+let x = 10;
+x += 5;  // x = 15
+x *= 2;  // x = 30
+x -= 10; // x = 20
+
+| Toán tử | Ví dụ           | Kết quả |        |   |         |        |
+| ------- | --------------- | ------- | ------ | - | ------- | ------ |
+| `&&`    | `true && false` | `false` |        |   |         |        |
+| \`      |                 | \`      | \`true |   | false\` | `true` |
+| `!`     | `!true`         | `false` |        |   |         |        |
+
+let a = true;
+let b = false;
+
+console.log(a && b);  // false
+console.log(a || b);  // true
+console.log(!a);      // false

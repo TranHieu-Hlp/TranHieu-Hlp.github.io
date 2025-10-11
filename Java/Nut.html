@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nút Bấm Thay Đổi</title>
+</head>
+<body>
+
+  <h2>Ví dụ về nút bấm</h2>
+  <button onclick="thucHien()">Bấm tôi để đổi màu nền</button>
+
+  <script>
+    function thucHien() {
+      document.body.style.backgroundColor = "lightblue";
+      console.log("Đã đổi màu nền!");
+    }
+  </script>
+
+</body>
+</html>
+
+<p id="ketqua">Chưa có gì xảy ra</p>
+<button onclick="doiNoiDung()">Bấm để đổi nội dung</button>
+
+<script>
+  function doiNoiDung() {
+    document.getElementById("ketqua").innerText = "Bạn vừa bấm nút!";
+  }
+</script>

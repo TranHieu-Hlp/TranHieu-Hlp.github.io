@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Form</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h3>Form Đăng Nhập</h3>
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="control-label col-sm-2">Username:</label>
+        <div class="col-sm-4">
+          <input class="form-control" type="text" placeholder="Nhập tên...">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2">Password:</label>
+        <div class="col-sm-4">
+          <input class="form-control" type="password" placeholder="Nhập mật khẩu...">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-4">
+          <button class="btn btn-primary" type="submit">Đăng nhập</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+| Thành phần                             | Ý nghĩa                                                                |
+| -------------------------------------- | ---------------------------------------------------------------------- |
+| `form class="form-horizontal"`         | Tạo **form dạng ngang**, dùng hệ thống lưới để canh lề.                |
+| `div class="form-group"`               | Một nhóm điều khiển (label + input), có margin dưới.                   |
+| `label class="control-label col-sm-2"` | Label được canh ngang, chiếm **2 cột** (trong 12).                     |
+| `div class="col-sm-4"`                 | Phần chứa `input`, chiếm **4 cột**.                                    |
+| `input class="form-control"`           | Định dạng ô nhập liệu theo Bootstrap (bo tròn, padding đẹp, viền nhẹ). |

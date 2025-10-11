@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dự án HTML + JavaScript Đầy Đủ</title>
+  <style>
+    /* === CSS CƠ BẢN === */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #004080;
+      text-shadow: 1px 1px 1px #ccc;
+    }
+
+    .box {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.01);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table, th, td {
+      border: 1px solid #aaa;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    img {
+      margin-top: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      transition: opacity 0.3s;
+    }
+
+    img:hover {
+      opacity: 0.8;
+    }
+
+    input[type="text"], input[type="submit"] {
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      width: 200px;
+    }
+
+    input[type="submit"] {
+      background-color: #28a745;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #218838;
+    }
+
+    button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      margin-right: 5px;
+      margin-top: 5px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HTML + JavaScript Toàn Diện</h1>
+
+  <!-- 1. Biến, toán tử, kiểu dữ liệu -->
+  <div class="box">
+    <h2>Biến và Toán tử</h2>
+    <button onclick="phepTinh()">Tính toán</button>
+    <p id="ketqua"></p>
+  </div>
+
+  <!-- 2. Điều kiện, vòng lặp, switch -->
+  <div class="box">
+    <h2>Điều kiện và vòng lặp</h2>
+    <button onclick="kiemTraSo()">Kiểm tra số</button>
+    <button onclick="inMangSoChan()">In số chẵn</button>
+    <p id="kiemtra"></p>
+    <p id="chan"></p>
+  </div>
+
+  <!-- 3. DOM manipulation và form -->
+  <div class="box">
+    <h2>Biểu mẫu và DOM</h2>
+    <form id="myForm" onsubmit="xuLyForm(event)">
+      <label>Nhập tên:</label>
+      <input type="text" id="ten" required>
+      <input type="submit" value="Gửi">
+    </form>
+    <p id="loichao"></p>
+  </div>
+
+  <!-- 4. Mảng và đối tượng -->
+  <div class="box">
+    <h2>Mảng và Đối tượng</h2>
+    <button onclick="xemDanhSach()">Xem danh sách trái cây</button>
+    <button onclick="hienThiDoiTuong()">Xem thông tin người dùng</button>
+    <ul id="danhsach"></ul>
+    <p id="nguoidung"></p>
+  </div>
+
+  <!-- 5. Sự kiện và xử lý tương tác -->
+  <div class="box">
+    <h2>Sự kiện và Tương tác</h2>
+    <input type="text" onkeydown="nhapPhim(event)" placeholder="Gõ phím...">
+    <p id="phim"></p>
+    <div id="hoverbox" style="padding: 10px; background: #ddd;" onmouseover="hoverVao()" onmouseout="hoverRa()">Di chuột vào tôi</div>
+  </div>
+
+  <!-- 6. Thời gian và bộ đếm -->
+  <div class="box">
+    <h2>Thời gian</h2>
+    <p id="thoigian"></p>
+    <button onclick="demNguoc()">Bắt đầu đếm ngược</button>
+    <p id="countdown"></p>
+  </div>
+
+  <!-- 7. alert, prompt, confirm -->
+  <div class="box">
+    <h2>Thông báo</h2>
+    <button onclick="hienThongBao()">Hiển thị Alert</button>
+    <button onclick="xacNhan()">Xác nhận</button>
+    <button onclick="nhapTen()">Nhập tên</button>
+  </div>
+
+  <!-- 8. Table + Hình ảnh -->
+  <div class="box">
+    <h2>Bảng và Ảnh</h2>
+    <table>
+      <tr><th>Tên</th><th>Tuổi</th></tr>
+      <tr><td>Nam</td><td>22</td></tr>
+      <tr><td>Lan</td><td>24</td></tr>
+    </table>
+    <img src="https://via.placeholder.com/150" alt="Ảnh minh họa">
+  </div>
+
+  <script>
+    // JavaScript giữ nguyên ở đây...
+  </script>
+</body>
+</html>

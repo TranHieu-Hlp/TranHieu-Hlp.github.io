@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Ví dụ Grid Bootstrap 3</title>
+  <!-- Bootstrap 3 CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    .bg-header    { background-color: #5bc0de; padding: 20px; color: white; }
+    .bg-sidebar   { background-color: #f0ad4e; padding: 20px; }
+    .bg-content   { background-color: #5cb85c; padding: 20px; color: white; }
+    .bg-footer    { background-color: #d9534f; padding: 20px; color: white; margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+  <!-- Bắt đầu khung Bootstrap -->
+  <div class="container">
+    
+    <!-- Hàng đầu tiên: Header -->
+    <div class="row">
+      <div class="col-xs-12 bg-header text-center">
+        <h1>Đây là Header</h1>
+      </div>
+    </div>
+
+    <!-- Hàng thứ hai: Sidebar + Content -->
+    <div class="row">
+      <div class="col-sm-4 bg-sidebar">
+        <h3>Sidebar trái</h3>
+        <p>Menu hoặc thông tin phụ.</p>
+      </div>
+      <div class="col-sm-8 bg-content">
+        <h3>Nội dung chính</h3>
+        <p>Đây là nơi bạn trình bày bài viết, hình ảnh, sản phẩm,...</p>
+      </div>
+    </div>
+
+    <!-- Hàng cuối: Footer -->
+    <div class="row">
+      <div class="col-xs-12 bg-footer text-center">
+        <p>Bản quyền © 2025 - Trang web ví dụ Bootstrap 3</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JS cho Bootstrap 3 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>

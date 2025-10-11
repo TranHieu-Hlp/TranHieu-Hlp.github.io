@@ -1,0 +1,65 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>while loop demo</title>
+    <script language="javascript" type="text/javascript">
+      var n = 20;
+      var i = 1; // Khởi tạo i = 1 để bắt đầu từ số lẻ
+      document.write("Display the odd numbers:<br>");
+
+      while (i <= n) {
+        if (i % 2 != 0) { // Kiểm tra số lẻ
+          document.write(i + "\t"); // Hiển thị số lẻ
+        }
+        i++; // Tăng i lên
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+
+Cú pháp của JavaScript:
+
+Cần có dấu cách giữa var và tên biến, ví dụ: var n = 20;.
+
+Đặt biến i = 1 để vòng lặp bắt đầu từ số lẻ đầu tiên.
+
+Kiểm tra số lẻ:
+
+Trong câu lệnh if(i % 2 != 0), kiểm tra xem số i có phải là số lẻ không (số chia hết cho 2 dư 1).
+
+Hiển thị kết quả:
+
+Sử dụng document.write(i + "\t"); để in số lẻ và tab giữa các số.
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>do-while loop demo</title>
+    <script language="javascript" type="text/javascript">
+      var n = 20;
+      var i = 0; // Bắt đầu từ số 0
+      document.write("Display the even numbers:<br>");
+
+      do {
+        if (i % 2 == 0) { // Kiểm tra số chẵn
+          document.write(i + "&nbsp;&nbsp;"); // Thêm khoảng trắng giữa các số
+        }
+        i++; // Tăng giá trị của i sau mỗi vòng lặp
+      } while (i <= n); // Tiếp tục khi i <= 20
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
+
+Khởi tạo biến: var n = 20; và var i = 0; sẽ giúp bắt đầu từ số 0.
+
+Vòng lặp do...while:
+
+Đầu tiên, vòng lặp thực thi ít nhất một lần.
+
+Sau đó, kiểm tra điều kiện i <= n để tiếp tục vòng lặp cho đến khi i lớn hơn 20.
+
+Điều kiện số chẵn: if(i % 2 == 0) để kiểm tra nếu i là số chẵn.
+
+Hiển thị số: document.write(i + "&nbsp;&nbsp;"); để hiển thị số và thêm khoảng trắng giữa các số

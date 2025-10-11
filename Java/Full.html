@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Siêu dự án học HTML + JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 20px;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    .box {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      background: #fff;
+    }
+    #time {
+      font-weight: bold;
+      color: green;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    td, th {
+      border: 1px solid #ccc;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body onload="init()">
+
+  <h1>Học HTML & JavaScript từ A-Z</h1>
+
+  <div class="box">
+    <h2>1. Biến, Toán tử và Hiển thị</h2>
+    <p id="ketqua1"></p>
+    <button onclick="tinhToan()">Thực hiện phép tính</button>
+  </div>
+
+  <div class="box">
+    <h2>2. Điều kiện và vòng lặp</h2>
+    <button onclick="kiemTraTuoi()">Nhập tuổi và kiểm tra</button>
+    <p id="tuoi"></p>
+    <button onclick="inChan()">In số chẵn từ 1 đến 20</button>
+    <p id="chan"></p>
+  </div>
+
+  <div class="box">
+    <h2>3. DOM và biểu mẫu</h2>
+    <form onsubmit="xuLyForm(event)">
+      Tên: <input type="text" id="ten" required>
+      <button type="submit">Gửi</button>
+    </form>
+    <p id="loiChao"></p>
+  </div>
+
+  <div class="box">
+    <h2>4. Mảng & Đối tượng</h2>
+    <button onclick="duyetMang()">Duyệt mảng</button>
+    <button onclick="doiTuong()">Xem thông tin học viên</button>
+    <p id="mang"></p>
+    <p id="hocvien"></p>
+  </div>
+
+  <div class="box">
+    <h2>5. Sự kiện nâng cao</h2>
+    <input type="text" placeholder="Gõ gì đó..." onkeydown="logSuKien(event)">
+    <div id="log"></div>
+    <div id="hover" onmouseover="doiMau(this)" onmouseout="resetMau(this)" style="width:200px; height:50px; background:#ddd; margin-top:10px; text-align:center;">Di chuột vào tôi</div>
+  </div>
+
+  <div class="box">
+    <h2>6. Thời gian</h2>
+    <p>Thời gian hiện tại: <span id="time"></span></p>
+  </div>
+
+  <div class="box">
+    <h2>7. Bảng và Hình ảnh</h2>
+    <table>
+      <tr><th>Tên</th><th>Tuổi</th></tr>
+      <tr><td>Nam</td><td>20</td></tr>
+      <tr><td>Lan</td><td>21</td></tr>
+    </table>
+    <br>
+    <img src="https://via.placeholder.com/150" alt="Ảnh mẫu">
+  </div>
+
+  <script>
+    function init() {
+      setInterval(() => {
+        const now = new Date();
+        document.getElementById("time").innerText = now.toLocaleTimeString();
+      }, 1000);
+    }
+
+    function tinhToan() {
+      let a = 10, b = 5;
+      let tong = a + b;
+      let nhan = a * b;
+      let hopLe = a > b;
+      document.getElementById("ketqua1").innerText =
+        `Tổng: ${tong}, Nhân: ${nhan}, So sánh: ${hopLe}`;
+    }
+
+    function kiemTraTuoi() {
+      let tuoi = prompt("Nhập tuổi:");
+      if (tuoi >= 18) {
+        alert("Bạn đủ tuổi!");
+      } else {
+        alert("Chưa đủ tuổi!");
+      }
+      document.getElementById("tuoi").innerText = `Tuổi của bạn: ${tuoi}`;
+    }
+
+    function inChan() {
+      let kq = "";
+      for (let i = 1; i <= 20; i++) {
+        if (i % 2 === 0) {
+          kq += i + " ";
+        }
+      }
+      document.getElementById("chan").innerText = kq;
+    }
+
+    function xuLyForm(e) {
+      e.preventDefault();
+      const ten = document.getElementById("ten").value;
+      document.getElementById("loiChao").innerText = `Xin chào, ${ten}!`;
+    }
+
+    function duyetMang() {
+      const mang = ["Táo", "Cam", "Nho"];
+      let kq = "";
+      for (let i = 0; i < mang.length; i++) {
+        kq += `${i + 1}. ${mang[i]}\n`;
+      }
+      document.getElementById("mang").innerText = kq;
+    }
+
+    function doiTuong() {
+      const hocVien = {
+        ten: "Minh",
+        tuoi: 22,
+        lop: "JavaScript cơ bản"
+      };
+      document.getElementById("hocvien").innerText =
+        `Tên: ${hocVien.ten}, Tuổi: ${hocVien.tuoi}, Lớp: ${hocVien.lop}`;
+    }
+
+    function logSuKien(event) {
+      document.getElementById("log").innerText = `Bạn vừa gõ: ${event.key}`;
+    }
+
+    function doiMau(el) {
+      el.style.backgroundColor = "#90ee90";
+      el.innerText = "Đổi màu rồi!";
+    }
+
+    function resetMau(el) {
+      el.style.backgroundColor = "#ddd";
+      el.innerText = "Di chuột vào tôi";
+    }
+  </script>
+
+</body>
+</html>

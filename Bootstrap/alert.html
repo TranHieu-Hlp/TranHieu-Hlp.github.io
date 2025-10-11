@@ -1,0 +1,32 @@
+Thành phần	Ý nghĩa
+class="alert"	Đây là hộp thông báo Bootstrap
+alert-success	Màu xanh lá → thông báo thành công
+alert-dismissable	Cho phép người dùng đóng (ẩn) thông báo
+<a class="close" data-dismiss="alert">×</a>	Nút × dùng để tắt thông báo, nhờ thuộc tính data-dismiss="alert"
+<strong>Success!</strong>	Nội dung chính (in đậm) của thông báo
+This alert box...	Nội dung mô tả thêm
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bootstrap Alert Example</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h3>Alert Example</h3>
+    <div class="alert alert-success alert-dismissable">
+      <a class="close" data-dismiss="alert" aria-label="close">×</a>
+      <strong>Success!</strong> This alert box could indicate a successful or positive action.
+    </div>
+  </div>
+</body>
+</html>
+Mẹo: Các loại alert phổ biến
+Class	Màu nền	Dùng khi muốn báo...
+alert-success	Xanh lá	Thành công
+alert-info	Xanh dương	Thông tin chung
+alert-warning	Vàng	Cảnh báo
+alert-danger	Đỏ	Lỗi hoặc hành động nguy hiểm

@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    gap: 0px; 
+    padding: 40px;
+}
+.column1 {
+    flex: 2;
+    padding: 20px;
+    background-color: rgb(215, 229, 220);
+}
+.column2 {
+    flex: 9 ;
+    padding-left: 45px;
+    background-color: rgb(174, 198, 203);
+    padding-right: 50%;
+
+}

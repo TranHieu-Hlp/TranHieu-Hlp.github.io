@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sự kiện trong JavaScript</title>
+  <style>
+    body { font-family: Arial; }
+    input, button, div {
+      margin: 10px 0;
+      padding: 8px;
+      border: 1px solid #ccc;
+    }
+    #hoverBox {
+      width: 200px;
+      height: 100px;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body onload="log('Sự kiện: Trang đã tải (onload)')">
+
+  <h2>Sự kiện Form và Chuột</h2>
+
+  <form onsubmit="log('Sự kiện: Gửi form (onsubmit)'); return false;">
+    <input type="text" onfocus="log('Sự kiện: Được focus (onfocus)')"
+           onblur="log('Sự kiện: Mất focus (onblur)')"
+           onchange="log('Sự kiện: Nội dung thay đổi (onchange)')" placeholder="Nhập gì đó..." />
+    <button type="submit">Gửi</button>
+  </form>
+
+  <button onclick="log('Sự kiện: Click chuột (onclick)')">Bấm tôi</button>
+
+  <div id="hoverBox"
+       onmouseover="log('Sự kiện: Di chuột vào (onmouseover)')"
+       onmouseout="log('Sự kiện: Di chuột ra (onmouseout)')"
+       onmousedown="log('Sự kiện: Nhấn chuột xuống (onmousedown)')"
+       onmouseup="log('Sự kiện: Nhả chuột ra (onmouseup)')">
+    Di chuột hoặc nhấn chuột vào đây
+  </div>
+
+  <h2>Sự kiện Bàn phím</h2>
+  <input type="text"
+         onkeydown="log('Sự kiện: Nhấn phím xuống (onkeydown)')"
+         onkeypress="log('Sự kiện: Giữ phím (onkeypress)')"
+         onkeyup="log('Sự kiện: Nhả phím (onkeyup)')"
+         placeholder="Gõ gì đó..." />
+
+  <h3>Console log:</h3>
+  <div id="logBox" style="white-space: pre-line; border: 1px solid #aaa; padding: 10px; height: 200px; overflow-y: scroll;"></div>
+
+  <script>
+    function log(message) {
+      const logBox = document.getElementById('logBox');
+      logBox.innerText += message + '\n';
+      logBox.scrollTop = logBox.scrollHeight;
+    }
+
+    // Mô phỏng onerror (không bắt được ảnh lỗi -> chạy lệnh này)
+    window.onerror = function(msg, url, lineNo) {
+      log('Sự kiện: Lỗi xảy ra (onerror): ' + msg);
+      return true;
+    };
+
+    // Tạo lỗi thử nghiệm
+    // notExistFunction(); // uncomment dòng này để test onerror
+  </script>
+
+</body>
+</html>
